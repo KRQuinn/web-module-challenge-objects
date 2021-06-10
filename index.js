@@ -133,11 +133,12 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  let lastReview = array.length -1
+  return `${array[lastReview].name} gave the restaurant a ${array[lastReview].rating} star review, and their feedback was: ${array[lastReview].feedback}`;
 } 
 
-
+console.log('task 7:', getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
