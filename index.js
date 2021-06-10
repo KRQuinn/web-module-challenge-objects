@@ -156,11 +156,19 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+ function getReviewByRating(array, getRating) {
+  let newArray = [];
+    for(let i = 0; i < array.length; i++){
+      if(array[i].rating <= getRating + .9 && array[i].rating >= getRating){
+        newArray.push(`"${array[i].name}", rating: ${array[i].rating}, feedback: "${array[i].feedback}"`);
+      }
+    }
+    return newArray;
   }
 
+  console.log('Stretch 1:', getReviewByRating(reviews, 4));
   
+
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
